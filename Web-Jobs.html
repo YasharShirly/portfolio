@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shirly Yashar - Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
+    .w3-sidebar { width: 120px; background: #222; }
+    #main { margin-left: 120px; }
+    @media only screen and (max-width: 600px) { #main { margin-left: 0; } }
+
+    /* עיצוב כפתורי שפה */
+    .lang-btn {
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #555;
+      padding: 6px 14px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+      margin: 0 4px;
+      transition: background-color 0.2s;
+    }
+    .lang-btn:hover {
+      background-color: #555;
+    }
+    .lang-btn.active {
+      background-color: #f1f1f1;
+      color: #000;
+    }
+  </style>
+</head>
+<body class="w3-black">
+
+<!-- סרגל צד למסכים גדולים -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <img src="logo.png" alt="Shirly Yashar Logo" style="width:100%; padding: 10px; border-radius: 50%;">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p class="nav-home">HOME</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p class="nav-about">ABOUT</p>
+  </a>
+  <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-code w3-xxlarge"></i>
+    <p class="nav-projects">PROJECTS</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p class="nav-contact">CONTACT</p>
+  </a>
+</nav>
+
+<!-- סרגל עליון לנייד -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button nav-home" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button nav-about" style="width:25% !important">ABOUT</a>
+    <a href="#projects" class="w3-bar-item w3-button nav-projects" style="width:25% !important">PROJECTS</a>
+    <a href="#contact" class="w3-bar-item w3-button nav-contact" style="width:25% !important">CONTACT</a>
+  </div>
+</div>
+
+<!-- תוכן העמוד -->
+<div class="w3-padding-large" id="main">
+
+  <!-- כפתורי מעבר שפה בחלק העליון -->
+  <div class="w3-container w3-padding-16 w3-right-align">
+    <button id="btn-he" class="lang-btn" onclick="setLanguage('he')">עברית</button>
+    <button id="btn-en" class="lang-btn active" onclick="setLanguage('en')">English</button>
+  </div>
+
+  <!-- כותרת ראשית -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo" id="header-title">Shirly Yashar</h1>
+    <p class="w3-large" id="header-sub">Junior Full Stack Developer</p>
+  </header>
+
+  <!-- חלק אודות (About Section) -->
+  <div class="w3-content w3-padding-64" id="about">
+
+    <!-- גרסה באנגלית -->
+    <div id="about-en" lang="en" dir="ltr" class="w3-justify w3-text-grey">
+      <h2 class="w3-text-light-grey">About Me</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <p>Junior Full Stack Developer with hands-on experience building web applications using React, TypeScript, Python, FastAPI, Node.js, SQL, and MongoDB.</p>
+      <p>During my studies and practicum, I developed full-stack applications, built REST APIs, worked with databases, and collaborated in an Agile development environment using Git and Docker.</p>
+      <p>I enjoy solving technical challenges, writing clean and maintainable code, and continuously learning new technologies. I'm highly motivated to grow as a software developer, contribute to meaningful projects, and work collaboratively as part of a development team.</p>
+      
+      <div class="w3-section w3-padding-16">
+      <a href="cv.pdf" download="Shirly_Yashar_CV.pdf" class="w3-button w3-light-grey w3-padding-large">
+        <i class="fa fa-download"></i> Download Resume
+      </a>
+      </div>
+    </div>
+
+    <!-- גרסה בעברית -->
+    <div id="about-he" lang="he" dir="rtl" class="w3-justify w3-text-grey" style="display: none;">
+      <h2 class="w3-text-light-grey">קצת עליי</h2>
+      <hr style="width:200px" class="w3-opacity">
+      <p>הנדסאית תוכנה ומפתחת Full-Stack. בעלת ניסיון מעשי בפיתוח אפליקציות ומערכות אינטרנטיות מקצה לקצה בטכנולוגיות React, TypeScript, Python, Node.js, ובסיסי נתונים SQL ו-MongoDB.</p>
+      <p>במסגרת הלימודים והפרויקטים המעשיים פיתחתי ממשקי משתמש דינמיים, ממשקי REST API, וניהלתי סביבות פיתוח באמצעות Docker ו-Git בעבודה לפי מתודולוגיית Agile.</p>
+      <p>אחראית, בעלת חשיבה אנליטית ומוטיבציה גבוהה ללמוד, להתקדמות מקצועית ולפתרון אתגרים טכנולוגיים. מחפשת את ההזדמנות להשתלב בצוות פיתוח, לתרום מהיכולות שלי ולצמוח כמפתחת תוכנה.</p>
+      
+      <div class="w3-section w3-padding-16">
+      <a href="cv.pdf" download="Shirly_Yashar_CV.pdf" class="w3-button w3-light-grey w3-padding-large">
+        <i class="fa fa-download"></i> הורדת קורות חיים
+      </a>
+      </div>
+    </div>
+
+  </div>
+
+
+<!-- חלק פרויקטים (Projects Section) -->
+  <div class="w3-padding-64 w3-content" id="projects">
+    <h2 class="w3-text-light-grey" id="projects-title">Projects</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <!-- גריד כרטיסיות פרויקטים -->
+    <div class="w3-row-padding" style="margin:0 -16px">
+
+      <!-- פרויקט 1: SkyPath -->
+      <div class="w3-half w3-margin-bottom">
+        <div class="w3-card w3-container w3-dark-grey w3-padding-16">
+          <h3>SkyPath</h3>
+          <p class="w3-opacity">Python (FastAPI), React, MongoDB, Docker</p>
+          
+          <div class="proj-skypath-en">
+            <p>Developed client and server-side components for a full-stack system. Managed deployment environments using Docker and maintained clean code using Agile methodologies.</p>
+          </div>
+          <div class="proj-skypath-he" style="display: none;" dir="rtl">
+            <p>פיתוח רכיבי צד לקוח וצד שרת עבור מערכת Full-Stack. ניהול סביבת פיתוח והרצת אפליקציות באמצעות Docker ועבודה במתודולוגיית Agile.</p>
+          </div>
+          
+          <p>
+            <a href="https://github.com/shirly-yashar" target="_blank" class="w3-button w3-black w3-block">
+              <i class="fa fa-github"></i> GitHub Repository
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- פרויקט 2: MyJewelry -->
+      <div class="w3-half w3-margin-bottom">
+        <div class="w3-card w3-container w3-dark-grey w3-padding-16">
+          <h3>MyJewelry</h3>
+          <p class="w3-opacity">React, Node.js, MySQL</p>
+          
+          <div class="proj-jewelry-en">
+            <p>E-commerce web application. Developed interactive UI, inventory and order management, and full REST APIs with client & server-side validations.</p>
+          </div>
+          <div class="proj-jewelry-he" style="display: none;" dir="rtl">
+            <p>אתר קניות אינטרנטי. פיתוח צד שרת ולקוח, יצירת ממשק משתמש אינטראקטיבי, ניהול הזמנות ומלאי, ויישום REST API מלא.</p>
+          </div>
+          
+          <p>
+            <a href="https://github.com/YasharShirly/MyJewelry-fullstack" target="_blank" class="w3-button w3-black w3-block">
+              <i class="fa fa-github"></i> GitHub Repository
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- פרויקט 3: Logo Test -->
+      <div class="w3-half w3-margin-bottom">
+        <div class="w3-card w3-container w3-dark-grey w3-padding-16">
+          <h3 id="logo-title-en">Logo Test Game</h3>
+          <h3 id="logo-title-he" style="display: none;" dir="rtl">משחק לוגוטסט</h3>
+          <p class="w3-opacity">JavaScript, HTML5, CSS3</p>
+          
+          <div class="proj-logo-en">
+            <p>Interactive browser game. Designed user interface and developed dynamic response mechanisms and real-time user behavior.</p>
+          </div>
+          <div class="proj-logo-he" style="display: none;" dir="rtl">
+            <p>משחק דפדפן אינטראקטיבי. עיצוב ופיתוח ממשק משתמש, פיתוח מנגנוני תגובה דינמיים והתנהגות משתמש בזמן אמת.</p>
+          </div>
+          
+          <p>
+            <a href="https://yasharshirly.github.io/Logotest_Game-JS/login.html" target="_blank" class="w3-button w3-light-grey w3-block w3-margin-bottom">
+              <i class="fa fa-external-link"></i> Live Demo
+            </a>
+            <a href="https://github.com/YasharShirly/Logotest_Game-JS" target="_blank" class="w3-button w3-black w3-block">
+              <i class="fa fa-github"></i> GitHub Repository
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- פרויקט 4: Dream Bakery -->
+      <div class="w3-half w3-margin-bottom">
+        <div class="w3-card w3-container w3-dark-grey w3-padding-16">
+          <h3>Dream Bakery</h3>
+          <p class="w3-opacity">HTML5, CSS3</p>
+          
+          <div class="proj-bakery-en">
+            <p>Static bakery website featuring product catalog, about page, and order forms with strong emphasis on visual design and UX.</p>
+          </div>
+          <div class="proj-bakery-he" style="display: none;" dir="rtl">
+            <p>אתר מאפייה סטטי הכולל קטלוג מוצרים, דף אודות וטפסי הזמנה. יישום מלא בדגש על עיצוב ויזואלי נקי וחוויית משתמש.</p>
+          </div>
+          
+          <p>
+            <a href="https://yasharshirly.github.io/Bakery-project-html/home-project.html" target="_blank" class="w3-button w3-light-grey w3-block w3-margin-bottom">
+              <i class="fa fa-external-link"></i> Live Demo
+            </a>
+            <a href="https://github.com/YasharShirly/Bakery-project-html" target="_blank" class="w3-button w3-black w3-block">
+              <i class="fa fa-github"></i> GitHub Repository
+            </a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <!-- חלק יצירת קשר -->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+    <h2 class="w3-text-light-grey" id="contact-title">Contact</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> <span id="contact-location">Rishon LeZion, Israel</span></p>
+      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> 053-7553008</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> shirlyhasama@gmail.com</p>
+    </div>
+  </div>
+
+  <!-- פוטר -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge w3-center">
+    <a href="https://www.linkedin.com/in/shirly-yashar-497a933b2/" target="_blank" class="w3-hover-opacity"><i class="fa fa-linkedin"></i></a>
+    <a href="https://github.com/YasharShirly" target="_blank" class="w3-hover-opacity w3-margin-left"><i class="fa fa-github"></i></a>
+  </footer>
+
+</div>
+
+<!-- פונקציית JavaScript להחלפת שפה גלובלית -->
+<script>
+  function setLanguage(lang) {
+    const enDiv = document.getElementById('about-en');
+    const heDiv = document.getElementById('about-he');
+    const btnEn = document.getElementById('btn-en');
+    const btnHe = document.getElementById('btn-he');
+
+    const navHomeList = document.querySelectorAll('.nav-home');
+    const navAboutList = document.querySelectorAll('.nav-about');
+    const navProjectsList = document.querySelectorAll('.nav-projects');
+    const navContactList = document.querySelectorAll('.nav-contact');
+
+    const headerTitle = document.getElementById('header-title');
+    const headerSub = document.getElementById('header-sub');
+    const contactTitle = document.getElementById('contact-title');
+    const contactLocation = document.getElementById('contact-location');
+    const projectsTitle = document.getElementById('projects-title');
+
+    if (lang === 'he') {
+      enDiv.style.display = 'none';
+      heDiv.style.display = 'block';
+
+      btnHe.classList.add('active');
+      btnEn.classList.remove('active');
+
+      navHomeList.forEach(el => el.innerText = 'בית');
+      navAboutList.forEach(el => el.innerText = 'אודות');
+      navProjectsList.forEach(el => el.innerText = 'פרויקטים');
+      navContactList.forEach(el => el.innerText = 'צור קשר');
+
+      headerTitle.innerText = 'שירלי ישר';
+      headerSub.innerText = 'גוניורית Full Stack מפתחת';
+      contactTitle.innerText = 'צור קשר';
+      contactLocation.innerText = 'ראשון לציון, ישראל';
+      projectsTitle.innerText = 'פרויקטים';
+
+      // החלפת טקסט פרויקטים לעברית
+      document.querySelectorAll('.proj-skypath-en, .proj-jewelry-en, .proj-logo-en, .proj-bakery-en').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.proj-skypath-he, .proj-jewelry-he, .proj-logo-he, .proj-bakery-he').forEach(el => el.style.display = 'block');
+      document.getElementById('logo-title-en').style.display = 'none';
+      document.getElementById('logo-title-he').style.display = 'block';
+
+    } else {
+      heDiv.style.display = 'none';
+      enDiv.style.display = 'block';
+
+      btnEn.classList.add('active');
+      btnHe.classList.remove('active');
+
+      navHomeList.forEach(el => el.innerText = 'HOME');
+      navAboutList.forEach(el => el.innerText = 'ABOUT');
+      navProjectsList.forEach(el => el.innerText = 'PROJECTS');
+      navContactList.forEach(el => el.innerText = 'CONTACT');
+
+      headerTitle.innerText = 'Shirly Yashar';
+      headerSub.innerText = 'Junior Full Stack Developer';
+      contactTitle.innerText = 'Contact';
+      contactLocation.innerText = 'Rishon LeZion, Israel';
+      projectsTitle.innerText = 'Projects';
+
+      // החלפת טקסט פרויקטים לאנגלית
+      document.querySelectorAll('.proj-skypath-he, .proj-jewelry-he, .proj-logo-he, .proj-bakery-he').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.proj-skypath-en, .proj-jewelry-en, .proj-logo-en, .proj-bakery-en').forEach(el => el.style.display = 'block');
+      document.getElementById('logo-title-he').style.display = 'none';
+      document.getElementById('logo-title-en').style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
